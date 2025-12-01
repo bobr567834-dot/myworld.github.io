@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="guessnumber.css">
+</head>
+<body>
+    <div class="container">
+        <a href="games.html" class="back-link">← В Меню Игр</a>
+        
+        <h1>🔢 Угадай число</h1>
+        
+        <div class="controls">
+            <label for="difficulty">Выберите сложность:</label>
+            <select id="difficulty">
+                <option value="100">Легко (1-100)</option>
+                <option value="1000">Средне (1-1000)</option>
+                <option value="10000">Сложно (1-10000)</option>
+                <option value="custom">Свой диапазон</option>
+            </select>
+
+            <div id="customRangeInputs" class="hidden" style="margin-top: 10px;">
+                <label for="minInput">От:</label>
+                <input type="number" id="minInput" value="1" min="1" style="width: 70px;">
+                <label for="maxInput">До:</label>
+                <input type="number" id="maxInput" value="1000" min="2" style="width: 70px;">
+            </div>
+
+            <button id="startGame">Начать игру</button>
+        </div>
+        
+        <div id="gameArea" class="hidden">
+            <p id="instruction"></p>
+            
+            <input type="number" id="guessInput" required disabled>
+            <button id="checkGuess" disabled>Проверить</button>
+            
+            <p id="message"></p>
+            <p>Попыток: <span id="attempts">0</span></p>
+        </div>
+    </div>
+    <script src="guessnumber.js"></script>
+    <style> /* Стили для контейнера и ссылки "назад" */
+        .container {
+             text-align: center;
+             background: white;
+             padding: 30px;
+             border-radius: 8px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+             position: relative;
+        }
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.minesweeper-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+h1 {
+    color: #333;
+    margin-top: 0;
+}
+
+.controls, #info {
+    margin-bottom: 15px;
+}
+
+#board {
+    display: inline-grid;
+    border: 3px solid #666;
+    background-color: #ccc;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #888;
+    background-color: #ddd;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    font-size: 14px;
+}
+
+.cell.open {
+    background-color: #eee;
+    border-color: #bbb;
+    cursor: default;
+}
+
+.cell.flag::before {
+    content: '🚩';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    line-height: 30px;
+    z-index: 5;
+}
+
+.cell.bomb {
+    background-color: red;
+    content: '💣';
+    color: black;
+}
+
+.cell.bomb::before {
+    content: '💣';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    line-height: 30px;
+    z-index: 5;
+}
+
+.cell[data-count="1"] { color: blue; }
+.cell[data-count="2"] { color: green; }
+.cell[data-count="3"] { color: red; }
+.cell[data-count="4"] { color: darkblue; }
+.cell[data-count="5"] { color: darkred; }
+.cell[data-count="6"] { color: teal; }
+.cell[data-count="7"] { color: black; }
+.cell[data-count="8"] { color: gray; }
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+#message.win { background-color: #d4edda; color: #155724; }
+#message.lose { background-color: #f8d7da; color: #721c24; }
+.hidden { display: none; }
