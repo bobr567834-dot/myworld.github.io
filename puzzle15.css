@@ -1,0 +1,89 @@
+﻿/* Стили для контейнера Пятнашек */
+.puzzle-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 400px;
+}
+.dark-mode .puzzle-container {
+    background: #333;
+}
+
+#puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 3px solid #333;
+    margin: 20px auto;
+    background-color: #ccc;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.dark-mode #puzzle-board {
+    border-color: #eee;
+    background-color: #222;
+}
+
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #00bcd4;
+    color: white;
+    border: 1px solid #1a237e;
+    cursor: pointer;
+    transition: transform 0.2s;
+    user-select: none;
+}
+
+.tile:hover:not(.empty) {
+    background-color: #00a6b5;
+}
+
+.empty {
+    background-color: #ccc;
+    cursor: default;
+    border: none;
+}
+.dark-mode .empty {
+    background-color: #222;
+}
+
+
+#puzzle-status {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#message {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#resetBtn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#resetBtn:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}

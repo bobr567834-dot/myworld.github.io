@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змейка</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <div class="game-container">
+        <a href="games.html" class="back-link">← В Меню Игр</a>
+        <h1>🐍 Змейка (Snake)</h1>
+        
+        <div class="game-info">
+            <span id="score">Счет: 0</span>
+            <span id="highScore">Рекорд: 0</span> <span id="status">Нажмите 'Старт'</span>
+        </div>
+
+        <div id="board">
+            </div>
+
+        <button id="startBtn">Старт</button>
+        <p class="controls-hint">Управление: Стрелки (↑, ↓, ←, →)</p>
+    </div>
+
+    <script src="snake.js"></script>
+    <script src="theme-toggle.js"></script>
+</body>
+</html>
