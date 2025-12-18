@@ -1,0 +1,98 @@
+﻿.calc-container {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    width: 95%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.dark-mode .calc-container {
+    background: #2c2c2c;
+    color: white;
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    font-size: 2.5rem;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: none;
+    background: #f4f4f4;
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.dark-mode #display {
+    background: #3d3d3d;
+    color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки одинаковой ширины */
+    gap: 12px;
+}
+
+.btn {
+    height: 60px;
+    border: none;
+    border-radius: 50px; /* Круглые кнопки как в iOS */
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #e0e0e0;
+    color: #000;
+}
+
+.dark-mode .btn {
+    background: #505050;
+    color: white;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Специальные цвета */
+.operator {
+    background: #ff9f0a !important;
+    color: white !important;
+}
+
+.clear {
+    background: #a5a5a5 !important;
+    color: black !important;
+}
+
+.equals {
+    background: #ff9f0a !important;
+    color: white !important;
+    grid-row: span 2; /* Растягиваем на 2 ряда для симметрии */
+    height: 132px;
+}
+
+.zero {
+    grid-column: span 2; /* Ноль на две колонки */
+    text-align: left;
+    padding-left: 25px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.9rem;
+}
